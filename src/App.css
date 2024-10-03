@@ -1,0 +1,141 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+.clock-container {
+  font-family: "Courier New", Courier, monospace;
+  color: #00ff00;
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.time {
+  font-size: 5em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+.day-date {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.weather {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+/* Clock.css */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #000; /* Full-page black background */
+}
+
+.full-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-container {
+  font-family: "Courier New", Courier, monospace;
+  color: #00ff00; /* Green color for matrix display */
+  background: rgba(0, 0, 0, 0.7); /* Slight transparency */
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ff00, 0 0 50px #00ff00, 0 0 100px #00ff00;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.time {
+  font-size: 7em;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  display: flex;
+  align-items: center;
+}
+
+.seconds {
+  color: #ff4500; /* Bright red-orange for nixie tube look */
+  text-shadow: 0 0 10px #ff4500, 0 0 20px #ff4500, 0 0 30px #ff4500;
+  animation: nixie-change 1s ease-in-out infinite;
+}
+
+@keyframes nixie-change {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2); /* Slight scaling effect */
+    opacity: 0.8; /* Dimming effect */
+  }
+}
+
+.day-date {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00ff00; /* Keep the same green matrix theme */
+}
+
+.weather {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #87cefa; /* Light blue for weather info */
+}
